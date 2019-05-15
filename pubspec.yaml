@@ -7,8 +7,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # mobile_flutter_merchant:
-  #   path: c:\Users\tpolanski\Documents\GitHub\mobile_flutter_merchant\
+  mobile_flutter_merchant:
+    path: ../flutter-desktop-embedding/mobile-flutter-merchant/
   flutter_localizations:
     sdk: flutter
 
@@ -28,12 +28,12 @@ dev_dependencies:
     sdk: flutter
 
 
-
 flutter:
 
   uses-material-design: true
   assets:
     - assets/
+    - images/ #todo copy
 
   fonts:
     - family: Montserrat
@@ -62,3 +62,17 @@ flutter:
           weight: 400
         - asset: fonts/AnonymouPro/AnonymousPro-Bold.ttf
           weight: 700
+    - family: OpenSans #todo copy
+      fonts:
+        - asset: fonts/OpenSans-Light.ttf
+        - asset: fonts/OpenSans-Italic.ttf
+        - asset: fonts/OpenSans-ExtraBoldItalic.ttf
+        - asset: fonts/OpenSans-ExtraBold.ttf
+        - asset: fonts/OpenSans-BoldItalic.ttf
+        - asset: fonts/OpenSans-Bold.ttf
+        - asset: fonts/OpenSans-SemiBoldItalic.ttf
+        - asset: fonts/OpenSans-Regular.ttf
+        - asset: fonts/OpenSans-LightItalic.ttf
+    - family: OpenSans-Semibold
+      fonts:
+        - asset: fonts/OpenSans-SemiBold.ttf

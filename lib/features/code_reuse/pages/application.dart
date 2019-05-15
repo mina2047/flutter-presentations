@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mobile_flutter_merchant/test_driver/mocks/merchants.dart'
+    as merchants;
+import 'package:mobile_flutter_merchant/test_driver/mocks/setup.dart';
 
 class GrouponApp extends StatefulWidget {
   @override
@@ -22,7 +25,7 @@ class _GrouponAppState extends State<GrouponApp> {
         Expanded(
           child: Center(
             child: Container(
-              width: 480,
+              width: 600,
               margin: EdgeInsets.symmetric(vertical: 18),
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.black, width: 2),
@@ -40,7 +43,19 @@ class _GrouponAppState extends State<GrouponApp> {
                         ),
                       ),
                     )
-                  : Placeholder(),
+                  : Setup.staging().copySelf(
+                      (setup) {
+                        return setup.copyWith(
+                          configuration: setup.configuration.copyWith(
+                            merchant: merchants.asianTokyo,
+                          ),
+                          preferences: setup.preferences.copyWith(
+                            wasTutorialShown: true,
+                            wasCampaignRedirectionShown: true,
+                          ),
+                        );
+                      },
+                    ).build(),
             ),
           ),
         ),
