@@ -50,7 +50,7 @@ class _GrouponAppState extends State<GrouponApp> {
                             merchant: merchants.asianTokyo,
                           ),
                           preferences: setup.preferences.copyWith(
-                            wasTutorialShown: true,
+                            wasTutorialShown: false,
                             wasCampaignRedirectionShown: true,
                           ),
                         );

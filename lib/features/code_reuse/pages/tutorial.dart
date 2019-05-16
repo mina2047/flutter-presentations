@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_presentations/shared/animation_builder.dart';
 import 'package:flutter_presentations/shared/clippers.dart';
+import 'package:mobile_flutter_merchant/features/groupon_dashboard/performance/performance_state.dart';
+import 'package:mobile_flutter_merchant/features/groupon_dashboard/performance/performance_tiles.dart';
+import 'package:mobile_flutter_merchant/features/groupon_dashboard/static_dashboard_tile.dart';
+import 'package:mobile_flutter_merchant/features/groupon_dashboard/tutorial/tutorial_sections.dart';
+import 'package:mobile_flutter_merchant/features/groupon_dashboard/voucher/voucher.dart';
+import 'package:mobile_flutter_merchant/generated/i18n.dart';
+import 'package:mobile_flutter_merchant/shared/l10n/l10n.dart';
 import 'package:presentation/effects.dart';
 import 'package:presentation/presentation.dart';
 
@@ -194,9 +203,14 @@ class _TutorialResultState extends State<TutorialResult>
                   ? AnimatedOpacity(
                       opacity: _showGraph ? 1 : 0,
                       duration: Duration(milliseconds: 100),
-                      child: SizedBox(
-                        width: 250,
-                        child: Placeholder(),
+                      child: _GL10n(
+                        child: SizedBox(
+                          height: 250,
+                          width: 250,
+                          child: Align(
+                            child: _GPerformance(),
+                          ),
+                        ),
                       ),
                     )
                   : SizedBox(),
@@ -233,6 +247,61 @@ class _TutorialResultState extends State<TutorialResult>
           ),
         ),
       ],
+    );
+  }
+}
+
+class _GPerformance extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ClippedTutorialWidget(
+      color: const Color.fromRGBO(223, 125, 119, 1.0),
+      child: Transform.translate(
+        offset: Offset(60, 60),
+        child: OverflowBox(
+          maxHeight: double.infinity,
+          maxWidth: 500,
+          alignment: Alignment.topLeft,
+          child: TileWrapper(
+            child: StaticDashboardTile(
+              isLoaded: true,
+              placeholder: SizedBox(),
+              child: VoucherWidget(
+                VoucherStats(
+                  soldCount: 3528,
+                  redeemedCount: 1900,
+                  expiredCount: 200,
+                ),
+                onTap: () {},
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _GL10n extends StatelessWidget {
+  const _GL10n({
+    Key key,
+    @required this.child,
+  }) : super(key: key);
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      localizationsDelegates: const [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        CupertinoLocalizationsDelegate()
+      ],
+      supportedLocales: S.delegate.supportedLocales,
+      localeResolutionCallback: translationResolution(Locale('en', '')),
+      home: child,
     );
   }
 }
