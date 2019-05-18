@@ -13,6 +13,8 @@ build/
 .vscode/launch.json
 test_driver/screenshots/
 /screenshots
+/fonts
+/images
 
 linux/.generated_flutter_root
 windows/Generated.props
