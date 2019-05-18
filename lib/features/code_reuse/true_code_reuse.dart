@@ -64,7 +64,6 @@ class _CodeReuseState extends State<CodeReuse> {
               controller: controller,
               presentationController: presentationController,
               children: [
-                TutorialResult(presentationController),
                 Intro(),
                 Solid(presentationController),
                 InheritanceVsComposition(presentationController),
@@ -72,6 +71,7 @@ class _CodeReuseState extends State<CodeReuse> {
                 EverythingsWidget(presentationController),
                 BigWidget(presentationController),
                 TutorialGoal(presentationController),
+                TutorialResult(presentationController),
                 GrouponApp(),
                 Inception(presentationController),
                 PlatformStack(presentationController),
