@@ -17,7 +17,7 @@ dependencies:
   mockito: 3.0.0
   flutter_sidekick: ^0.1.3
   process_run: ^0.10.1
-  rxdart: ^0.22.0
+  rxdart: ^0.18.1
   presentation: ^0.0.4
     #path: ../presentation/
 
