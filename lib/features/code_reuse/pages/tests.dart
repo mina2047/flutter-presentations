@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:presentation/presentation.dart';
+import 'package:process_run/shell.dart';
 
 class Tests extends StatefulWidget {
   const Tests(
@@ -35,8 +36,10 @@ class _TestsState extends State<Tests> {
       ..add(
         fromStep: _Step.init,
         toStep: _Step.highlighted,
-        forward: () => setState(
-            () => _style = _style.copyWith(fontWeight: FontWeight.bold)),
+        forward: () {
+          _runAppTests();
+          setState(() => _style = _style.copyWith(fontWeight: FontWeight.bold));
+        },
         reverse: () => setState(
             () => _style = _style.copyWith(fontWeight: FontWeight.normal)),
       )
@@ -176,4 +179,16 @@ class _TestsState extends State<Tests> {
       ],
     );
   }
+}
+
+void _runPresentationTests() {
+  Shell()
+      .run('cd C:\\Users\\tpolanski\\Documents\\GitHub\\flutter-presentations'
+          ' && dart lib\\test_driver\\test_runner.dart');
+}
+
+void _runAppTests() {
+  Shell().run(
+      'cd c:\\Users\\tpolanski\\Documents\\GitHub\\flutter-desktop-embedding\\mobile-flutter-merchant'
+      ' && dart lib\\test_driver\\runner.dart');
 }
