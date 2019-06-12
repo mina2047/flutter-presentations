@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_presentations/shared/animation_builder.dart';
 import 'package:flutter_presentations/shared/clippers.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 import 'package:presentation/effects.dart';
 import 'package:presentation/presentation.dart';
 

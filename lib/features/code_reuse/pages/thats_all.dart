@@ -1,8 +1,7 @@
 import 'dart:math';
 
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_presentations/shared/animation_mode.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 
 class GradientContainer extends StatelessWidget {
   const GradientContainer({

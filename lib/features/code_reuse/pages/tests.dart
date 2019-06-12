@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 import 'package:presentation/presentation.dart';
 
 class Tests extends StatefulWidget {

@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_presentations/features/convincing_for_flutter/pages/assessment.dart';
 import 'package:flutter_presentations/features/convincing_for_flutter/pages/convince_team.dart';
 import 'package:flutter_presentations/features/convincing_for_flutter/pages/groupon_intro.dart';
@@ -6,6 +5,7 @@ import 'package:flutter_presentations/features/convincing_for_flutter/pages/intr
 import 'package:flutter_presentations/features/convincing_for_flutter/pages/summary.dart';
 import 'package:flutter_presentations/features/convincing_for_flutter/shared/groupon_theme.dart';
 import 'package:flutter_presentations/features/convincing_for_flutter/shared/pages.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 import 'package:flutter_presentations/shared/themes.dart';
 import 'package:presentation/presentation.dart';
 

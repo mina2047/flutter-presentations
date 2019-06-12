@@ -1,8 +1,7 @@
 import 'dart:math' as math;
 
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_presentations/features/slivers/Bar.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 import 'package:meta/meta.dart';
 
 class CustomAppBarDelegate extends SliverPersistentHeaderDelegate {
@@ -18,8 +17,7 @@ class CustomAppBarDelegate extends SliverPersistentHeaderDelegate {
   double get minExtent => 0.0;
 
   @override
-  double get maxExtent =>
-      math.max(expandedHeight, minExtent);
+  double get maxExtent => math.max(expandedHeight, minExtent);
 
   @override
   Widget build(

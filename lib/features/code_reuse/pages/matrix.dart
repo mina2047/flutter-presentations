@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_presentations/shared/animation_builder.dart';
 import 'package:flutter_presentations/shared/animation_mode.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 import 'package:intl/intl.dart';
 import 'package:presentation/presentation.dart';
 

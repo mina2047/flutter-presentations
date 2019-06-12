@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_presentations/shared/animation_builder.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 
 class RevealEffect extends StatefulWidget {
   const RevealEffect({

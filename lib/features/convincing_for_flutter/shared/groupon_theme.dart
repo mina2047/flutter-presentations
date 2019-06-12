@@ -1,4 +1,4 @@
-import 'package:flutter/painting.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 
 class GTheme {
   static const Color green = const Color(0xFF6aa84f);

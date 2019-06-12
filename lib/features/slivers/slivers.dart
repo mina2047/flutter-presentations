@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_presentations/features/slivers/pages/CustomMultiChildLayoutExample.dart';
 import 'package:flutter_presentations/features/slivers/pages/cheat_sheet.dart';
 import 'package:flutter_presentations/features/slivers/pages/code.dart';
@@ -10,6 +9,7 @@ import 'package:flutter_presentations/features/slivers/pages/thanks.dart';
 import 'package:flutter_presentations/features/slivers/pages/title.dart';
 import 'package:flutter_presentations/features/slivers/pages/types.dart';
 import 'package:flutter_presentations/features/slivers/pages/what_is_sliver.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 import 'package:presentation/presentation.dart';
 
 class Slivers extends StatefulWidget {

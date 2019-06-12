@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_presentations/features/code_reuse/true_code_reuse.dart';
 import 'package:flutter_presentations/features/convincing_for_flutter/convincing.dart';
 import 'package:flutter_presentations/features/slivers/slivers.dart';
 import 'package:flutter_presentations/features/testing/testing.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 
 class FlutterPresentations extends StatelessWidget {
   const FlutterPresentations({Key key}) : super(key: key);

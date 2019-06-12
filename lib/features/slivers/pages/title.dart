@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 
 class TitlePage extends StatelessWidget {
   @override
@@ -50,8 +50,7 @@ class TitlePage extends StatelessWidget {
           child: new Padding(
             padding: const EdgeInsets.only(right: 18.0, bottom: 18.0),
             child: new DefaultTextStyle(
-              style: Theme
-                  .of(context)
+              style: Theme.of(context)
                   .textTheme
                   .title
                   .copyWith(fontWeight: FontWeight.bold),

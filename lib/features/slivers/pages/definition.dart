@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 
 class Definition extends StatelessWidget {
   @override
@@ -12,9 +12,8 @@ class Definition extends StatelessWidget {
           children: <Widget>[
             new Text(
               '“A small, thin, narrow piece of '
-                  'something cut or split off a larger piece”',
-              style: Theme
-                  .of(context)
+              'something cut or split off a larger piece”',
+              style: Theme.of(context)
                   .textTheme
                   .display1
                   .copyWith(fontStyle: FontStyle.italic),

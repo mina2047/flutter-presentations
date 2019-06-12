@@ -1,5 +1,4 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 
 class Bar extends StatelessWidget {
   const Bar({

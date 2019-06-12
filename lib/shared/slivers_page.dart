@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 
 class SliverPage extends StatelessWidget {
   const SliverPage({

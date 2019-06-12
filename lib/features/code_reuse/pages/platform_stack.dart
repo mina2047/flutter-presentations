@@ -1,5 +1,4 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 import 'package:flutter_presentations/shared/utils.dart';
 import 'package:presentation/presentation.dart';
 

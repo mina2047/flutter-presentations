@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_presentations/features/convincing_for_flutter/shared/groupon_theme.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 import 'package:presentation/effects.dart';
 
 class ThankYouPage extends StatelessWidget {

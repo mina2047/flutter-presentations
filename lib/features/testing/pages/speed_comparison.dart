@@ -1,11 +1,9 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_presentations/shared/animation_builder.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 import 'package:presentation/presentation.dart';
-import 'package:process_run/shell.dart';
 
 class SpeedComparison extends StatefulWidget {
   const SpeedComparison(
@@ -139,7 +137,7 @@ class _SpeedComparisonState extends State<SpeedComparison>
       });
     });
     final start = DateTime.now();
-    await Shell(stdout: output).run(command);
+    //await Shell(stdout: output).run(command);
     final duration = DateTime.now().difference(start);
     await output.close();
     return duration;

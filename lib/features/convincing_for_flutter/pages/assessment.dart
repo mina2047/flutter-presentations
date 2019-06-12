@@ -1,10 +1,10 @@
 import 'dart:math';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_presentations/features/convincing_for_flutter/shared/groupon_theme.dart';
 import 'package:flutter_presentations/features/convincing_for_flutter/shared/pages.dart';
-import 'package:presentation/presentation.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 import 'package:presentation/effects.dart';
+import 'package:presentation/presentation.dart';
 
 class SurveyPage extends StatelessWidget {
   const SurveyPage({Key key}) : super(key: key);

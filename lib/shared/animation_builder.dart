@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 
 class AnimationBuilder<T> extends StatelessWidget {
   const AnimationBuilder({

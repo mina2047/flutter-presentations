@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_presentations/features/code_reuse/pages/application.dart';
 import 'package:flutter_presentations/features/code_reuse/pages/big_widget.dart';
 import 'package:flutter_presentations/features/code_reuse/pages/ci.dart';
@@ -16,6 +15,7 @@ import 'package:flutter_presentations/features/code_reuse/pages/tests.dart';
 import 'package:flutter_presentations/features/code_reuse/pages/thats_all.dart';
 import 'package:flutter_presentations/features/code_reuse/pages/tutorial.dart';
 import 'package:flutter_presentations/features/code_reuse/parallax_background.dart';
+import 'package:flutter_presentations/shared/material_import.dart';
 import 'package:flutter_presentations/shared/themes.dart';
 import 'package:presentation/presentation.dart';
 
