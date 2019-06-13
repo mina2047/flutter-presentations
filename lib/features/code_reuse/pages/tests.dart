@@ -188,7 +188,7 @@ void _runPresentationTests() {
 }
 
 void _runAppTests() {
-  Shell().run(
-      'cd c:\\Users\\tpolanski\\Documents\\GitHub\\flutter-desktop-embedding\\mobile-flutter-merchant'
-      ' && dart lib\\test_driver\\runner.dart');
+  Shell()
+      .run('cd c:\\Users\\tpolanski\\Documents\\GitHub\\mobile-flutter-merchant'
+          ' && dart lib\\test_driver\\runner.dart');
 }
