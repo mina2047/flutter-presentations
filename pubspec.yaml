@@ -8,7 +8,7 @@ dependencies:
   flutter:
     sdk: flutter
   mobile_flutter_merchant:
-    path: ../flutter-desktop-embedding/mobile-flutter-merchant/
+    path: ../mobile-flutter-merchant/
   flutter_localizations:
     sdk: flutter
 
