@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_presentations/shared/animation_builder.dart';
 import 'package:flutter_presentations/shared/clippers.dart';
 import 'package:mobile_flutter_merchant/features/groupon_dashboard/performance/performance_state.dart';
 import 'package:mobile_flutter_merchant/features/groupon_dashboard/performance/performance_tiles.dart';
