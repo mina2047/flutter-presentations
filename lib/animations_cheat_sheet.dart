@@ -1,4 +1,5 @@
 import 'package:animation_cheat_page/shared/material_import.dart';
+import 'package:animation_cheat_page/transitions/slide.dart';
 
 class AnimationCheatSheet extends StatelessWidget {
   const AnimationCheatSheet({Key key}) : super(key: key);
@@ -26,7 +27,9 @@ class _PresentationList extends StatelessWidget {
         title: const Text('Presentations'),
       ),
       body: ListView(
-        children: <Widget>[],
+        children: [
+          SlideExample(),
+        ],
       ),
     );
   }
