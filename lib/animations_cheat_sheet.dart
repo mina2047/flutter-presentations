@@ -15,7 +15,7 @@ class AnimationCheatSheet extends StatelessWidget {
       navigatorKey: gKey,
       theme: ThemeData(
         primarySwatch: Colors.green,
-        fontFamily: 'Montserrat',
+        fontFamily: 'Roboto',
       ),
       home: const _PresentationList(),
     );
