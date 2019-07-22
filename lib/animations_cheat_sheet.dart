@@ -1,3 +1,4 @@
+import 'package:animation_cheat_page/shared/frame.dart';
 import 'package:animation_cheat_page/shared/material_import.dart';
 import 'package:animation_cheat_page/transitions/scale.dart';
 import 'package:animation_cheat_page/transitions/slide.dart';
@@ -12,7 +13,10 @@ class AnimationCheatSheet extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       navigatorKey: gKey,
-      theme: ThemeData(fontFamily: 'Montserrat'),
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        fontFamily: 'Montserrat',
+      ),
       home: const _PresentationList(),
     );
   }
@@ -23,14 +27,9 @@ class _PresentationList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Presentations'),
-      ),
-      body: Container(
-        color: Colors.red,
-        child: const _AnimationProvider(),
-      ),
+    return Container(
+      color: Colors.white,
+      child: const _AnimationProvider(),
     );
   }
 }
@@ -74,15 +73,21 @@ class __AnimationProviderState extends State<_AnimationProvider>
       ),
     );
 
-    return Column(
+    return ListView(
       children: [
-        SlideExample(
-          animation: _controller,
-          child: child,
+        PhoneFrame(
+          title: SlideExample.title,
+          child: SlideExample(
+            animation: _controller,
+            child: child,
+          ),
         ),
-        ScaleExample(
-          animation: _controller,
-          child: child,
+        PhoneFrame(
+          title: ScaleExample.title,
+          child: ScaleExample(
+            animation: _controller,
+            child: child,
+          ),
         ),
       ],
     );

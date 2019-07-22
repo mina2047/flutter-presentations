@@ -9,6 +9,8 @@ class SlideExample extends StatelessWidget {
         assert(child != null),
         super(key: key);
 
+  static const title = 'SlideTransition';
+
   final Widget child;
   final Animation<double> animation;
 
