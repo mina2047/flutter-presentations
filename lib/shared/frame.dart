@@ -1,4 +1,5 @@
 import 'package:animation_cheat_page/shared/material_import.dart';
+import 'package:intl/intl.dart';
 
 class PhoneFrame extends StatelessWidget {
   const PhoneFrame({
@@ -13,19 +14,44 @@ class PhoneFrame extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        SizedBox(
-          width: 400,
-          height: 300,
-          child: Scaffold(
-            appBar: AppBar(
-              title: Text(title),
+    return Align(
+      child: SizedBox(
+        width: 300,
+        height: 400,
+        child: Stack(
+          children: <Widget>[
+            MediaQuery(
+              data: const MediaQueryData(padding: EdgeInsets.only(top: 20)),
+              child: Scaffold(
+                appBar: AppBar(
+                  primary: true,
+                  title: Text(title),
+                ),
+                body: Center(child: child),
+              ),
             ),
-            body: Center(child: child),
-          ),
-        )
-      ],
+            Container(
+              height: 26,
+              color: Colors.black.withOpacity(0.2),
+              padding: const EdgeInsets.symmetric(horizontal: 4),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  Icon(Icons.signal_cellular_4_bar, color: Colors.white),
+                  Icon(Icons.battery_charging_full, color: Colors.white),
+                  Text(
+                    DateFormat.Hm().format(DateTime.now()),
+                    style: Theme.of(context)
+                        .textTheme
+                        .body2
+                        .copyWith(color: Colors.white, fontSize: 17),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

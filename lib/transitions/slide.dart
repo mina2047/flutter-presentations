@@ -18,8 +18,8 @@ class SlideExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return SlideTransition(
       position: animation.drive(Tween<Offset>(
-        begin: const Offset(0, 0),
-        end: const Offset(1, 0),
+        begin: const Offset(-0.5, 0),
+        end: const Offset(0.5, 0),
       )),
       child: child,
     );
