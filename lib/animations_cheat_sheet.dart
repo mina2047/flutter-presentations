@@ -1,5 +1,5 @@
-import 'package:animation_cheat_page/shared/frame.dart';
 import 'package:animation_cheat_page/shared/material_import.dart';
+import 'package:animation_cheat_page/shared/section.dart';
 import 'package:animation_cheat_page/transitions/scale.dart';
 import 'package:animation_cheat_page/transitions/slide.dart';
 
@@ -13,6 +13,12 @@ class AnimationCheatSheet extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       navigatorKey: gKey,
+      builder: (context, child) {
+        return ScrollConfiguration(
+          behavior: NoOverflow(),
+          child: child,
+        );
+      },
       theme: ThemeData(
         primarySwatch: Colors.green,
         fontFamily: 'Roboto',
@@ -20,6 +26,16 @@ class AnimationCheatSheet extends StatelessWidget {
       home: const _PresentationList(),
     );
   }
+}
+
+class NoOverflow extends ScrollBehavior {
+  @override
+  Widget buildViewportChrome(
+    BuildContext context,
+    Widget child,
+    AxisDirection axisDirection,
+  ) =>
+      child;
 }
 
 class _PresentationList extends StatelessWidget {
@@ -73,23 +89,27 @@ class __AnimationProviderState extends State<_AnimationProvider>
       ),
     );
 
-    return ListView(
-      children: [
-        PhoneFrame(
-          title: SlideExample.title,
-          child: SlideExample(
-            animation: _controller,
-            child: child,
+    return Scrollbar(
+      child: ListView(
+        children: [
+          Section(
+            title: SlideExample.title,
+            body: Text(SlideExample.body),
+            child: SlideExample(
+              animation: _controller,
+              child: child,
+            ),
           ),
-        ),
-        PhoneFrame(
-          title: ScaleExample.title,
-          child: ScaleExample(
-            animation: _controller,
-            child: child,
+          Section(
+            title: ScaleExample.title,
+            body: Text(SlideExample.body),
+            child: ScaleExample(
+              animation: _controller,
+              child: child,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

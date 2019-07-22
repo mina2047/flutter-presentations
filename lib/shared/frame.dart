@@ -31,20 +31,28 @@ class PhoneFrame extends StatelessWidget {
               ),
             ),
             Container(
-              height: 26,
+              height: 28,
               color: Colors.black.withOpacity(0.2),
               padding: const EdgeInsets.symmetric(horizontal: 4),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  Icon(Icons.signal_cellular_4_bar, color: Colors.white),
-                  Icon(Icons.battery_charging_full, color: Colors.white),
+                  Icon(
+                    Icons.signal_cellular_4_bar,
+                    color: Colors.white,
+                    size: 18,
+                  ),
+                  Icon(
+                    Icons.battery_charging_full,
+                    color: Colors.white,
+                    size: 18,
+                  ),
                   Text(
                     DateFormat.Hm().format(DateTime.now()),
                     style: Theme.of(context)
                         .textTheme
                         .body2
-                        .copyWith(color: Colors.white, fontSize: 17),
+                        .copyWith(color: Colors.white, fontSize: 16),
                   ),
                 ],
               ),
