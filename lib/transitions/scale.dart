@@ -1,7 +1,7 @@
 import 'package:animation_cheat_page/shared/material_import.dart';
 
-class SlideExample extends StatelessWidget {
-  const SlideExample({
+class ScaleExample extends StatelessWidget {
+  const ScaleExample({
     @required this.animation,
     @required this.child,
     Key key,
@@ -14,11 +14,8 @@ class SlideExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SlideTransition(
-      position: animation.drive(Tween<Offset>(
-        begin: const Offset(0, 0),
-        end: const Offset(1, 0),
-      )),
+    return ScaleTransition(
+      scale: animation,
       child: child,
     );
   }
