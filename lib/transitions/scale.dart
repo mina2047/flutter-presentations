@@ -9,7 +9,7 @@ class ScaleExample extends StatelessWidget {
         assert(child != null),
         super(key: key);
 
-  static const title = 'ScaleExample';
+  static const title = 'ScaleTransition';
 
   final Widget child;
   final Animation<double> animation;
