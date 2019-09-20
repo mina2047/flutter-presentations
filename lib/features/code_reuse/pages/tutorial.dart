@@ -200,7 +200,7 @@ class _TutorialResultState extends State<TutorialResult>
               child: _showGraph
                   ? AnimatedOpacity(
                       opacity: _showGraph ? 1 : 0,
-                      duration: Duration(milliseconds: 100),
+                      duration: const Duration(milliseconds: 100),
                       child: _GL10n(
                         child: SizedBox(
                           height: 250,
@@ -253,9 +253,9 @@ class _GPerformance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClippedTutorialWidget(
-      color: const Color.fromRGBO(223, 125, 119, 1.0),
+      color: const Color.fromRGBO(223, 125, 119, 1),
       child: Transform.translate(
-        offset: Offset(60, 60),
+        offset: const Offset(60, 60),
         child: OverflowBox(
           maxHeight: double.infinity,
           maxWidth: 500,
@@ -263,9 +263,9 @@ class _GPerformance extends StatelessWidget {
           child: TileWrapper(
             child: StaticDashboardTile(
               isLoaded: true,
-              placeholder: SizedBox(),
+              placeholder: const SizedBox(),
               child: VoucherWidget(
-                VoucherStats(
+                const VoucherStats(
                   soldCount: 3528,
                   redeemedCount: 1900,
                   expiredCount: 200,
