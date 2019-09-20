@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:mobile_flutter_merchant/shared/persistent_storage/app_database.dart';
+import 'package:mobile_flutter_merchant/shared/persistent_storage/persisted_preferences_proxy.dart';
+import 'package:mobile_flutter_merchant/test_driver/mocks/languages.dart'
+    as languages;
 import 'package:mobile_flutter_merchant/test_driver/mocks/merchants.dart'
     as merchants;
 import 'package:mobile_flutter_merchant/test_driver/mocks/setup.dart';
+import 'package:sembast/sembast_io.dart';
 
 class GrouponApp extends StatefulWidget {
   @override
@@ -16,7 +20,7 @@ class _GrouponAppState extends State<GrouponApp> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
+        const Expanded(
           child: FlutterLogo(
             size: 250,
             style: FlutterLogoStyle.stacked,
@@ -26,7 +30,7 @@ class _GrouponAppState extends State<GrouponApp> {
           child: Center(
             child: Container(
               width: 600,
-              margin: EdgeInsets.symmetric(vertical: 18),
+              margin: const EdgeInsets.symmetric(vertical: 18),
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.black, width: 2),
               ),
@@ -37,8 +41,8 @@ class _GrouponAppState extends State<GrouponApp> {
                         color: Colors.transparent,
                         child: Center(
                           child: Image(
-                            image: AssetImage('assets/image7.png'),
-                            height: 100.0,
+                            image: const AssetImage('assets/image7.png'),
+                            height: 100,
                           ),
                         ),
                       ),
@@ -46,13 +50,23 @@ class _GrouponAppState extends State<GrouponApp> {
                   : Setup.staging().copySelf(
                       (setup) {
                         return setup.copyWith(
+                          locale: languages.english,
                           configuration: setup.configuration.copyWith(
                             merchant: merchants.asianTokyo,
+                            country: merchants.us,
                           ),
-                          preferences: setup.preferences.copyWith(
-                            wasTutorialShown: false,
-                            wasCampaignRedirectionShown: true,
+                          featureFlags: setup.featureFlags.copyWith(
+                            showCaseManagement: true,
+                            showCloIntegration: true,
+                            isFileManagementEnabled: true,
+                            fileAttachmentMaxSize: 10,
                           ),
+                          persistedPreferences: PersistedPreferencesProxy([
+                            SettingsStore(SettingsDatabase(
+                              databaseFactoryIo,
+                              encrypt: false,
+                            )),
+                          ]),
                         );
                       },
                     ).build(),

@@ -8,7 +8,6 @@ import 'package:mobile_flutter_merchant/features/groupon_dashboard/static_dashbo
 import 'package:mobile_flutter_merchant/features/groupon_dashboard/tutorial/tutorial_sections.dart';
 import 'package:mobile_flutter_merchant/features/groupon_dashboard/voucher/voucher.dart';
 import 'package:mobile_flutter_merchant/generated/i18n.dart';
-import 'package:mobile_flutter_merchant/shared/l10n/l10n.dart';
 import 'package:presentation/effects.dart';
 import 'package:presentation/presentation.dart';
 
@@ -41,7 +40,7 @@ class _TutorialGoalState extends State<TutorialGoal>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 500),
     );
     _stateController = PageStepper<_TutorialStep>(
       controller: widget.controller,
@@ -94,8 +93,8 @@ class _TutorialGoalState extends State<TutorialGoal>
         Expanded(
           child: WrappedAnimatedBuilder<Rect>(
             animation: RectTween(
-              begin: Rect.fromLTRB(0, 0, 1, 1),
-              end: Rect.fromLTRB(0, 0.31, 1, 0.61),
+              begin: const Rect.fromLTRB(0, 0, 1, 1),
+              end: const Rect.fromLTRB(0, 0.31, 1, 0.61),
             ).animate(CurvedAnimation(
               parent: _controller,
               curve: Curves.easeOut,
@@ -144,7 +143,7 @@ class _TutorialResultState extends State<TutorialResult>
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 500),
     );
     _stateController = PageStepper<_Step>(
       controller: widget.controller,
@@ -189,7 +188,7 @@ class _TutorialResultState extends State<TutorialResult>
                 alignment: Alignment.center,
                 child: AnimatedOpacity(
                   opacity: _showImage ? 1 : 0,
-                  duration: Duration(milliseconds: 100),
+                  duration: const Duration(milliseconds: 100),
                   child: Image.asset(
                     'assets/performance.png',
                     width: 245,
@@ -212,18 +211,18 @@ class _TutorialResultState extends State<TutorialResult>
                         ),
                       ),
                     )
-                  : SizedBox(),
+                  : const SizedBox(),
             ),
           ],
         ),
         Transform.translate(
-          offset: Offset(0, 80),
+          offset: const Offset(0, 80),
           child: Row(
             children: [
               Expanded(
                 child: AnimatedOpacity(
                   opacity: _showImage ? 1 : 0,
-                  duration: Duration(milliseconds: 100),
+                  duration: const Duration(milliseconds: 100),
                   child: Text(
                     'Image',
                     style: Theme.of(context).textTheme.title,
@@ -234,7 +233,7 @@ class _TutorialResultState extends State<TutorialResult>
               Expanded(
                 child: AnimatedOpacity(
                   opacity: _showGraph ? 1 : 0,
-                  duration: Duration(milliseconds: 100),
+                  duration: const Duration(milliseconds: 100),
                   child: Text(
                     'Widget',
                     style: Theme.of(context).textTheme.title,
@@ -300,7 +299,9 @@ class _GL10n extends StatelessWidget {
         CupertinoLocalizationsDelegate()
       ],
       supportedLocales: S.delegate.supportedLocales,
-      localeResolutionCallback: translationResolution(Locale('en', '')),
+      localeResolutionCallback: S.delegate.resolution(
+        fallback: const Locale('en', ''),
+      ),
       home: child,
     );
   }
