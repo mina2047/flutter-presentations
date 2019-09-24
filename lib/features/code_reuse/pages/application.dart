@@ -57,7 +57,7 @@ class _GrouponAppState extends State<GrouponApp> {
                           ),
                           featureFlags: setup.featureFlags.copyWith(
                             showCaseManagement: true,
-                            showCloIntegration: true,
+                            showCloIntegration: false,
                             isFileManagementEnabled: true,
                             fileAttachmentMaxSize: 10,
                           ),
