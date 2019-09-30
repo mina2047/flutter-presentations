@@ -191,5 +191,6 @@ void _runAppTests() {
   Shell()
       .run('cd c:\\Users\\tpolanski\\Documents\\GitHub\\mobile-flutter-merchant'
           ' && dart lib\\test_driver\\runner.dart '
-          '-f test_driver\\inbox_test.dart');
+          '-f test_driver\\inbox_test.dart '
+          '-l jp');
 }
