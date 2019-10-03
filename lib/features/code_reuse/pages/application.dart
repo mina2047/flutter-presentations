@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_flutter_merchant/features/groupon_dashboard/tutorial/tutorial_page.dart';
+import 'package:mobile_flutter_merchant/shared/configuration/configuration.dart';
+import 'package:mobile_flutter_merchant/shared/option/some.dart';
 import 'package:mobile_flutter_merchant/shared/persistent_storage/app_database.dart';
 import 'package:mobile_flutter_merchant/shared/persistent_storage/persisted_preferences_proxy.dart';
 import 'package:mobile_flutter_merchant/test_driver/mocks/languages.dart'
@@ -54,6 +57,9 @@ class _GrouponAppState extends State<GrouponApp> {
                           configuration: setup.configuration.copyWith(
                             merchant: merchants.asianTokyo,
                             country: merchants.us,
+                            route: RouteConfig(
+                              initialRoute: Some(TutorialPage.route),
+                            ),
                           ),
                           featureFlags: setup.featureFlags.copyWith(
                             showCaseManagement: true,
