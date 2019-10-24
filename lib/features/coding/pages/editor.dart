@@ -8,12 +8,14 @@ class Editor extends StatefulWidget {
     Key key,
     this.brightness = Brightness.dark,
     this.padding = EdgeInsets.zero,
+    this.nested = false,
     this.children = const [],
   }) : super(key: key);
 
   final String data;
   final Brightness brightness;
   final EdgeInsetsGeometry padding;
+  final bool nested;
   final List<Widget> children;
 
   @override
@@ -59,6 +61,7 @@ class _EditorState extends State<Editor> with SingleTickerProviderStateMixin {
       color: EditorColor.background.lerp(_controller.value),
       child: Scrollbar(
         child: ListView.builder(
+          shrinkWrap: widget.nested,
           padding: widget.padding,
           itemCount: lines.length,
           itemBuilder: (context, index) {

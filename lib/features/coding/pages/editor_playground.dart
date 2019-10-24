@@ -33,6 +33,14 @@ class _EditorTestState extends State<EditorTest> {
               width: 20,
             ),
           ),
+          Editor(
+            '''const QrCode({
+    @required this.child,
+    Key key,
+  }) : super(key: key);''',
+            brightness: _brightness,
+            nested: true,
+          )
         ],
       ),
     );
@@ -44,10 +52,7 @@ import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 class QrCode extends StatelessWidget {
-  const QrCode({
-    @required this.child,
-    Key key,
-  }) : super(key: key);
+  {1}
 
   final Widget child;
 

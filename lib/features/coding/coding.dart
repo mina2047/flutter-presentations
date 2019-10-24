@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_presentations/features/coding/pages/editor_test.dart';
+import 'package:flutter_presentations/features/coding/pages/basic_structure.dart';
+import 'package:flutter_presentations/features/coding/pages/editor_playground.dart';
 import 'package:flutter_presentations/features/coding/pages/qr_code.dart';
 import 'package:flutter_presentations/shared/themes.dart';
 import 'package:presentation/presentation.dart';
@@ -46,6 +47,7 @@ class _CodingState extends State<Coding> {
               controller: controller,
               presentationController: presentationController,
               children: [
+                BasicStructure(),
                 EditorTest(),
                 QrCode(
                   child: AnimatedColor(
