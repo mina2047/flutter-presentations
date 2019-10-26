@@ -28,7 +28,7 @@ class _PresentationList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Presentations'),
+        title: const Text('Presentati'),
       ),
       body: ListView(
         children: [

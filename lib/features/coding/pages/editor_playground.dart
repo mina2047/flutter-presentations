@@ -34,7 +34,7 @@ class _EditorTestState extends State<EditorTest> {
             ),
           ),
           Editor(
-            '''const QrCode({
+            '''  const QrCode({
     @required this.child,
     Key key,
   }) : super(key: key);''',

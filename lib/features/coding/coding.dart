@@ -47,7 +47,7 @@ class _CodingState extends State<Coding> {
               controller: controller,
               presentationController: presentationController,
               children: [
-                BasicStructure(),
+                BasicStructure(presentationController),
                 EditorTest(),
                 QrCode(
                   child: AnimatedColor(
