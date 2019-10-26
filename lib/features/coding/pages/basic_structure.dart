@@ -1,5 +1,4 @@
 import 'package:animation_cheat_page/shared/material_import.dart';
-import 'package:flutter_presentations/features/coding/pages/editor.dart';
 import 'package:presentation/presentation.dart';
 
 class BasicStructure extends StatefulWidget {

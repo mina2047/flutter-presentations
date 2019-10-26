@@ -23,8 +23,7 @@ dependencies:
   process_run: ^0.10.1
   qr_flutter: ^3.0.1
   rxdart: ^0.22.0
-  presentation: ^0.0.6
-    #path: ../presentation/
+  presentation: ^0.0.8
 
 dev_dependencies:
   flutter_test:
