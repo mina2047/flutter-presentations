@@ -45,7 +45,7 @@ RUN flutter version ${FLUTTER_VERSION}
 RUN flutter precache --linux
 
 ENV PRESENTATIONS_HOME /home/user/flutter-presentations
-RUN git clone https://github.com/tomaszpolanski/flutter-presentations.git ${PRESENTATIONS_HOME}
+RUN git clone -b flutter-1.15.17 https://github.com/tomaszpolanski/flutter-presentations.git ${PRESENTATIONS_HOME}
 ENV ENABLE_FLUTTER_DESKTOP true
 RUN cd ${PRESENTATIONS_HOME} && \
     flutter packages get
